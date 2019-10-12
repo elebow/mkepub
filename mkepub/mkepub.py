@@ -98,6 +98,9 @@ class Book:
         self._write_page(page, content)
         return page
 
+    def add_chapter(self, title, content, parent=None):
+        return self.add_page(title, content, parent)
+
     def add_image(self, name, data):
         """Add image file."""
         self.images.append(Image(next(self._image_id), name))
